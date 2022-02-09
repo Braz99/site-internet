@@ -1,25 +1,40 @@
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
+import { useEffect } from "react";
+
 import styles from "../../styles/components/carousel.module.css";
 
-export default function Carrousel(props) {
-  let [position, setPosition] = useState(1);
+export default function Carrousel({ start, end, children, time }) {
+  let [position, setPosition] = useState(start);
+
+  let [pass, setPass] = useState(true);
 
   function backward() {
-    setPosition(position === 0 ? 4 : position - 1);
+    setPosition(position === start ? end : position - 1);
   }
 
   function forward() {
-    setPosition(position === 4 ? 1 : position + 1);
+    setPosition(position === end ? start : position + 1);
   }
 
-  let child = "";
-
-  props.children.forEach((i) => {
+  let [child] = children.filter((i) => {
     if (i.props.id === position) {
-      child = i;
+      return i;
     }
   });
+
+  useEffect(() => {
+    setTimeout(
+      () => {
+        if (position < end) {
+          setPosition(position + 1);
+        } else if (position === end) {
+          setPosition(start);
+        }
+      },
+      time ? time : 3000
+    );
+  }, [position]);
 
   return (
     <div className={styles.carouselclass}>

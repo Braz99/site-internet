@@ -4,7 +4,6 @@ import Prices from "../components/Price";
 import styles from "../../styles/home.module.css";
 import Testimonial from "../components/Testimonial";
 
-import { useEffect, useState } from "react";
 import Carrousel from "../components/Carousel";
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
           Venha para a melhor internet da região!
         </div>
         <div className={styles.sales}>
-          {" "}
           <span className={styles.titleSales}>Ofertas arrasadoras!!!!</span>
         </div>
 
@@ -31,7 +29,7 @@ export default function Home() {
         </section>
 
         <section className={styles.testimonialssection}>
-          <Carrousel>
+          <Carrousel start={1} end={4} time={7000}>
             <Testimonial name="Joaquim Manuel" id={1}>
               Uso a telenet há mais de dois anos, e dentre as que já usei, ela é
               a melhor!

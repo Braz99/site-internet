@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 500px;
   height: 200px;
   padding: 10px;
   margin: 30px 10px;
@@ -39,10 +38,6 @@
 }
 
 @media (max-width: 750px) {
-  .testimonial {
-    width: 300px;
-  }
-
   .photo {
     width: 100px;
     height: 100px;
@@ -55,7 +50,6 @@
 
 @media (max-width: 400px) {
   .testimonial {
-    width: 300px;
     justify-content: center;
     padding: 0px;
   }

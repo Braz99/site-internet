@@ -23,13 +23,13 @@ export default function Home() {
         </div>
 
         <section className={styles.pricessection}>
-          <Prices plan="Básico" price="R$ 100,00" level={0} quantity={100} />
-          <Prices plan="Médio" price="R$120,00" level={1} quantity={200} />
-          <Prices plan="Premium" price="R$200,00" level={2} quantity={300} />
+          <Prices plan="Básico" price="R$ 100,00" quantity={100} />
+          <Prices plan="Médio" price="R$120,00" quantity={200} />
+          <Prices plan="Premium" price="R$200,00" quantity={300} />
         </section>
 
         <section className={styles.testimonialssection}>
-          <Carrousel start={1} end={4} time={7000}>
+          <Carrousel start={1} end={4}>
             <Testimonial name="Joaquim Manuel" id={1}>
               Uso a telenet há mais de dois anos, e dentre as que já usei, ela é
               a melhor!

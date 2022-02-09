@@ -1,12 +1,8 @@
-import { useState } from "react";
 import styles from "../../styles/components/prices.module.css";
 
 export default function Prices(props) {
- 
-
   return (
     <div className={styles.modelplan}>
-
       <h1 className={styles.title}>{props.plan}</h1>
 
       <h3 className={styles.quantity}>{props.quantity} megas!!!</h3>

@@ -4,10 +4,8 @@ import { useEffect } from "react";
 
 import styles from "../../styles/components/carousel.module.css";
 
-export default function Carrousel({ start, end, children, time }) {
+export default function Carrousel({ start, end, children }) {
   let [position, setPosition] = useState(start);
-
-  let [pass, setPass] = useState(true);
 
   function backward() {
     setPosition(position === start ? end : position - 1);
@@ -23,18 +21,19 @@ export default function Carrousel({ start, end, children, time }) {
     }
   });
 
-  useEffect(() => {
-    setTimeout(
-      () => {
-        if (position < end) {
-          setPosition(position + 1);
-        } else if (position === end) {
-          setPosition(start);
-        }
-      },
-      time ? time : 3000
-    );
-  }, [position]);
+  // let [pass, setPass] = useState(true);
+  // useEffect(() => {
+  //   setTimeout(
+  //     () => {
+  //       if (position < end) {
+  //         setPosition(position + 1);
+  //       } else if (position === end) {
+  //         setPosition(start);
+  //       }
+  //     },
+  //     time ? time : 3000
+  //   );
+  // }, [position]);
 
   return (
     <div className={styles.carouselclass}>

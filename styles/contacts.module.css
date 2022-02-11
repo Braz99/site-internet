@@ -1,0 +1,56 @@
+.title {
+  color: #1f1f49;
+  width: 100%;
+  text-align: left;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 5px;
+  text-align: left;
+  background-color: currentColor;
+  border-radius: 10px;
+}
+
+.whatsappdiv a {
+  color: #1f1f49;
+}
+
+.contactsection,
+.locationsection {
+  width: 100%;
+  margin: 15px 20px;
+}
+
+.whatsapp,
+.email {
+  margin: 20px;
+  font-size: 20px;
+}
+
+.whatsappdiv,
+.emaildiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.location {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.location li {
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.location li svg {
+  color: #1f1f49;
+}

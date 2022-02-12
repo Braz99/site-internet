@@ -25,9 +25,6 @@ export default function MainHeader() {
           <li>
             <Link href="/contact">Contact</Link>
           </li>
-          <li>
-            <Link href="/prices">Prices</Link>
-          </li>
         </ul>
 
         <div className={styles.toggle} onClick={toggleActive}>

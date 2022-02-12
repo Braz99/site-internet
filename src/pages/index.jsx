@@ -25,16 +25,31 @@ export default function Home() {
         </div>
 
         <section className={styles.pricessection}>
-          <Prices plan="Básico" price="R$ 100,00" quantity={100} />
-          <Prices plan="Médio" price="R$120,00" quantity={200} />
-          <Prices plan="Premium" price="R$200,00" quantity={300} />
+          <Prices
+            plan="Básico"
+            price="R$ 100,00"
+            quantity={100}
+            link={"/contact"}
+          />
+          <Prices
+            plan="Médio"
+            price="R$120,00"
+            quantity={200}
+            link={"/contact"}
+          />
+          <Prices
+            plan="Premium"
+            price="R$200,00"
+            quantity={300}
+            link={"/contact"}
+          />
         </section>
 
         <section className={styles.testimonialssection}>
           <Carrousel start={1} end={4}>
             <Testimonial name="Joaquim Manuel" id={1}>
-              Uso a telenet há mais de dois anos, e dentre as que já usei, ela é
-              a melhor!
+              Uso a Adessonet há mais de dois anos, e dentre as que já usei, ela
+              é a melhor!
             </Testimonial>
 
             <Testimonial name="Lúcia Almeida" id={2}>
@@ -48,7 +63,7 @@ export default function Home() {
             </Testimonial>
 
             <Testimonial name="Rebeca Silva" id={4}>
-              Já sou uma cliente fiel da Telenet, e já recomendei para várias
+              Já sou uma cliente fiel da Adessonet, e já recomendei para várias
               pessoas. A melhor de todas!
             </Testimonial>
           </Carrousel>

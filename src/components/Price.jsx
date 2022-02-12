@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../../styles/components/prices.module.css";
 
 export default function Prices(props) {
@@ -9,7 +10,9 @@ export default function Prices(props) {
 
       <h3 className={styles.price}>{props.price}</h3>
 
-      <button className={styles.checkbutton}>Conferir</button>
+      <Link href={props.link}>
+        <button className={styles.checkbutton}>Conferir</button>
+      </Link>
     </div>
   );
 }

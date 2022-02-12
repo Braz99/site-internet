@@ -11,7 +11,9 @@ export default function MainHeader() {
   }
   return (
     <header className={styles.header}>
-      <span className={styles.logo}>Logo</span>
+      <span className={styles.logo}>
+        <Link href="/">Adessonet</Link>
+      </span>
 
       <nav className={styles.navbar}>
         <ul

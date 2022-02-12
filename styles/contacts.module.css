@@ -28,6 +28,22 @@
 .email {
   margin: 20px;
   font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.whatsapp {
+  width: 190px;
+}
+
+.email {
+  width: 250px;
+}
+
+.whatsapp svg,
+.email svg {
+  color: #1f1f49;
 }
 
 .whatsappdiv,

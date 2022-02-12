@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import styles from "../../styles/contacts.module.css";
 import { ImWhatsapp } from "react-icons/im";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import Link from "next/link";
+import { AiOutlineMail } from "react-icons/ai";
 
 export default function Contact() {
   return (
@@ -11,20 +11,23 @@ export default function Contact() {
         <div className={styles.whatsappdiv}>
           <h1 className={styles.title}>Whatsapp</h1>
           <span className={styles.whatsapp}>
+            <ImWhatsapp />
             <a
               target="_blank"
               href={
                 "https://api.whatsapp.com/send?phone=0000000000&text=Salve%20o%20nosso%20n%C3%BAmero%20nos%20seus%20contatos!"
               }
             >
-              <ImWhatsapp />( 88 ) 99545-4678
+              ( 00 ) 00000-0000
             </a>
           </span>
         </div>
 
         <div className={styles.emaildiv}>
           <h1 className={styles.title}>Email</h1>
-          <span className={styles.email}>contato@gnet.com </span>
+          <span className={styles.email}>
+            <AiOutlineMail /> <i>contato@adessonet.com</i>
+          </span>
         </div>
       </section>
 

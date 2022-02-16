@@ -1,6 +1,6 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState } from "react";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
-import { useEffect } from "react";
+import Pagination from "./Pagination";
 
 import styles from "../../styles/components/carousel.module.css";
 
@@ -44,6 +44,8 @@ export default function Carrousel({ start, end, children }) {
       <span className={styles.arrowforward} onClick={forward}>
         <MdArrowForwardIos />
       </span>
+
+      <Pagination number={end} data={[position, setPosition]} />
     </div>
   );
 }

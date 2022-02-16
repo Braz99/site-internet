@@ -46,7 +46,7 @@ export default function Home() {
         </section>
 
         <section className={styles.testimonialssection}>
-          <Carrousel start={1} end={4}>
+          <Carrousel start={1} end={7}>
             <Testimonial name="Joaquim Manuel" id={1}>
               Uso a Adessonet há mais de dois anos, e dentre as que já usei, ela
               é a melhor!
@@ -65,6 +65,20 @@ export default function Home() {
             <Testimonial name="Rebeca Silva" id={4}>
               Já sou uma cliente fiel da Adessonet, e já recomendei para várias
               pessoas. A melhor de todas!
+            </Testimonial>
+
+            <Testimonial name="Nayanne" id={5}>
+              Indico, se você quer realmente uma internet de verdade e não
+              somente papo furado.
+            </Testimonial>
+
+            <Testimonial name="Joel" id={6}>
+              Ótima internet e ótimos serviços! Internet mais rápida que já vi!
+            </Testimonial>
+
+            <Testimonial name="Catherine" id={7}>
+              Depois de analisar todas as internets da região, pude concluir que
+              a Adessonet era a melhor, o que comprovei na prática.
             </Testimonial>
           </Carrousel>
         </section>

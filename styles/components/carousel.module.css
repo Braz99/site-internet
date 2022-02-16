@@ -1,5 +1,6 @@
 .carouselclass {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -21,6 +22,29 @@
   border: 1px solid #000;
   justify-content: center;
   align-items: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.point {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #1f1f49;
+  cursor: pointer;
+}
+
+.clicked {
+  background-color: #b11106;
+}
+
+.none {
+  background-color: #1f1f49;
 }
 
 @media (max-width: 750px) {

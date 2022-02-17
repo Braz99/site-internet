@@ -2,27 +2,43 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   padding: 10px;
-  margin: 40px 0px;
-  width: 80%;
+  margin: 0px 0px 40px 0px;
+  width: 100%;
+  height: 400px;
+  user-select: none;
+}
+
+.pricelist {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60%;
   min-width: 250px;
+  height: 150px;
   background-color: #1f1f49;
   color: #fff;
   font-size: 30px;
   border-radius: 10px;
-  margin: 25px;
+  margin: 25px 0px;
   text-align: center;
   padding: 10px;
+  user-select: none;
 }
 .sales {
   display: flex;
   width: 60%;
   min-width: 250px;
   justify-content: flex-end;
+  user-select: none;
 }
 
 .titleSales {
@@ -35,31 +51,68 @@
 
 .testimonialssection {
   display: flex;
-  width: 700px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
   flex-wrap: nowrap;
   overflow-x: hidden;
   padding: 10px;
-  margin: 30px 0px;
+  margin: 0px 0px 40px 0px;
+  user-select: none;
+}
+
+.callsection {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 0px 40px 0px;
+}
+
+.pricessection::before {
+  content: "Preços";
+  font-size: 30px;
+  color: #b11106;
+  border-bottom: 5px solid #1f1f49;
+  width: 80%;
+  text-align: start;
+}
+
+.testimonialssection::before {
+  content: "Testemunhos";
+  font-size: 30px;
+  color: #b11106;
+  border-bottom: 5px solid #1f1f49;
+  width: 80%;
+  text-align: start;
 }
 
 @media (max-width: 750px) {
-  .pricessection {
-    width: 200px;
-  }
-
   .sales {
     justify-content: center;
   }
 
+  .callsection {
+    height: 350px;
+  }
+
+  .pricessection {
+    height: auto;
+  }
+
   .testimonialssection {
-    width: 370px;
     padding: 0px;
   }
 }
 
 @media (max-width: 400px) {
   .testimonialssection {
-    width: 280px;
+    min-width: 300px;
     padding: 0px;
   }
 }

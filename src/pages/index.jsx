@@ -17,32 +17,36 @@ export default function Home() {
       </Head>
 
       <Layout title="Home">
-        <div className={styles.call}>
-          Venha para a melhor internet da região!
-        </div>
-        <div className={styles.sales}>
-          <span className={styles.titleSales}>Ofertas arrasadoras!!!!</span>
-        </div>
+        <section className={styles.callsection}>
+          <div className={styles.call}>
+            <span>Venha para a melhor internet da região!</span>
+          </div>
+          <div className={styles.sales}>
+            <span className={styles.titleSales}>Ofertas arrasadoras!!!!</span>
+          </div>
+        </section>
 
         <section className={styles.pricessection}>
-          <Prices
-            plan="Básico"
-            price="R$ 100,00"
-            quantity={100}
-            link={"/contact"}
-          />
-          <Prices
-            plan="Médio"
-            price="R$120,00"
-            quantity={200}
-            link={"/contact"}
-          />
-          <Prices
-            plan="Premium"
-            price="R$200,00"
-            quantity={300}
-            link={"/contact"}
-          />
+          <div className={styles.pricelist}>
+            <Prices
+              plan="Básico"
+              price="R$ 100,00"
+              quantity={100}
+              link={"/contact"}
+            />
+            <Prices
+              plan="Médio"
+              price="R$120,00"
+              quantity={200}
+              link={"/contact"}
+            />
+            <Prices
+              plan="Premium"
+              price="R$200,00"
+              quantity={300}
+              link={"/contact"}
+            />
+          </div>
         </section>
 
         <section className={styles.testimonialssection}>

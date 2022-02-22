@@ -3,12 +3,14 @@ import styles from "../../styles/components/header.module.css";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { useState } from "react";
 
-export default function MainHeader() {
+export default function MainHeader({ change }) {
   let [active, setActive] = useState(false);
 
   function toggleActive() {
     setActive(!active);
+    change();
   }
+
   return (
     <header className={styles.header}>
       <span className={styles.logo}>

@@ -15,12 +15,6 @@ export default function Carrousel({ start, end, children }) {
     setPosition(position === end ? start : position + 1);
   }
 
-  let [child] = children.filter((i) => {
-    if (i.props.id === position) {
-      return i;
-    }
-  });
-
   // let [pass, setPass] = useState(true);
   // useEffect(() => {
   //   setTimeout(
@@ -40,7 +34,9 @@ export default function Carrousel({ start, end, children }) {
       <span className={styles.arrowbackward} onClick={backward}>
         <MdArrowBackIosNew />
       </span>
-      <div className={styles.child}>{child}</div>
+      <div className={styles.child}>
+        {children.map((child) => (child.props.id === position ? child : false))}
+      </div>
       <span className={styles.arrowforward} onClick={forward}>
         <MdArrowForwardIos />
       </span>
